@@ -1,0 +1,48 @@
+<html>
+<head>
+</head>
+<body>
+<form name=dcf>
+<textarea name="clock"></textarea>
+</form>
+
+
+<script language="javascript">
+{
+
+   var d=newDate( )
+   var h=d.getHours( )
+   var m=get.Minutes( )
+   var s=get.seconds( )
+   var ampm="AM"
+
+if(h>12)
+
+ {
+     h=h-12
+     ampm="PM"
+  }
+
+
+if(m<9)
+   
+   {
+      m="0"+m
+    }
+
+if(s<9)
+
+    {
+       s="0"+s
+     }
+
+
+document.write.dcf.clock.value= h+":"+m+":"+s""+ampm
+
+setTimeout("clock( )"+ 1000)
+
+}
+
+clock( )
+</script>
+</html>

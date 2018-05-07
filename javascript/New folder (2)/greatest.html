@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+function grt()
+{
+  a1=dcf.a.value
+   b1=dcf.b.value
+  c1=dcf.c.value
+
+if(a1>b1 && a1>c1)
+   {
+      s==a1
+   }
+
+else if(b1>a1 && b1>c1)
+   {
+      s==b1
+   }
+
+else
+{  
+   s==c1
+}
+
+dcf.g.value=s
+
+}
+
+</script>
+</head>
+<body>
+<form name=dcf>
+enter first number<input type=text name=a>
+enter second number<input type=text name=b>
+greatest number<input type=text name=g>
+<input type=button value=GREATEST onclick=grt()>
+</form>
+</body>
+</html>

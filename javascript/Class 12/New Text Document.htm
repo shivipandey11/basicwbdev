@@ -1,0 +1,91 @@
+<html>
+<head>
+<script>
+   function runner()
+{   strn=ff.tt.value;
+   l=strn.length
+   alp=0
+   num=0
+   spac=0
+   spec=0
+   for(i=0;i<l;i++)
+   {   x= strn.substr(i,1).toUpperCase()
+        switch(x) 
+		{  
+		    case "A" :
+		    case "B" :
+		    case "C" :
+		    case "D" :
+		    case "E" :
+		    case "F" :
+		    case "G" :
+		    case "H" :
+			case "I" :
+			case "J" :
+			case "K" :
+			case "L" :
+			case "M" :
+			case "N" :
+			case "O" :
+			case "P" :
+			case "Q" :
+			case "R" :
+			case "S" :
+			case "T" :
+			case "U" :
+			case "V" :
+			case "W" :
+			case "X" :
+			case "Y" :
+			case "Z" :
+			         alp=alp+1
+					  break;
+			case "0" :
+			case "1" :
+			case "2" :
+			case "3" :
+			case "4" :
+			case "5" :
+			case "6" :
+			case "7" :
+			case "8" :
+			case "9" :
+			        num=num+1
+					    break;
+			case " " :
+                    spac=spac+1			
+		                break;
+             default:
+                     spec=spec+1			 
+		                 break;
+		
+		} 
+   }
+         ff.aa.value=alp;
+		 ff.nn.value=num;
+		 ff.ss.value=spac;
+		 ff.cc.value=spec;
+		 
+		 
+}		 
+</script>
+</head>
+<body>
+<form name=ff><center>
+<textarea rows=10 cols=10 name=tt>
+</textarea>
+<br><input type=button Value=CHECK onclick=runner()><br><hr>
+<hr>Alphabets<input type=text name=aa><br><br>
+<hr>Numbers <input type=text name=nn><br><br>
+<hr>Spaces <input type=text name=ss><br><br>
+<hr>Special Characters <input type=text name=cc><br><br>
+<hr>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+ <html>
+<head>
+<script language="javascript">
+function sum()
+{
+  
+    aa=dcf.A.value
+    bb=dcf.B.value
+
+   dcf.B.value= ParseInt(aa)+ParseInt(aa)
+
+
+
+}
+</script>
+<body>
+<form name="dcf">
+<CENTER>
+ENTER FIRST NUMBER:- </BR>
+              <INPUT TYPE="TEXT" NAME =A></BR>
+
+ENTER SECOND NUMBER:- </BR>
+             <INPUT TYPE="TEXT" NAME =B></BR>
+             <INPUT TYPE="BUTTON" VALUE=S onclick()=sum()>
+THE SUM:-
+             <INPUT TYPE="TEXT" NAME =B></BR>
+
+</BODY>
+</HTML>

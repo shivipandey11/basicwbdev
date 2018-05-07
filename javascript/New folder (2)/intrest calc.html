@@ -1,0 +1,33 @@
+<html>
+<head>
+<script type="text/javascript">
+function intcalc()
+{
+  aa=dcf.a.value
+  rr=dcf.rr.value
+  tt=dcf.r.value
+
+if(dcf.ra(0).checked)
+  i=p*r*t/100
+if(dcf.ra(1).checked)
+ i=No
+
+dcf.c.value=i
+
+}
+</script>
+</head>
+<body>
+<form name=dcf>
+<B>SIMPLE INTEREST <input type=radio name=p><B><br>
+<B>COUMPOUND INTEREST<input type=radio name=p><B><br>
+<br>
+Enter the value of amount:- <input type=text name=a>
+Enter the value of rate:- <input type=text name=r>
+Enter the value of time:- <input type=text name=t>
+
+<input type=button name=CALCULATE onclick()=intcalc()>
+<input type=text name=c>
+</form>
+</body>
+</html>

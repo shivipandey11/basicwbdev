@@ -1,0 +1,32 @@
+ <html>
+<head>
+<script type="text/javascript">
+function armstrong( )
+{
+  a1=dcf.a.value
+n=a1  
+l=a1.length
+  s=0
+  while(n>0)
+    {
+       r=a1%10
+       s=s+Math.pow(r,3)
+       n/10
+     }
+
+if(n==a1)
+dcf.b.value=YES
+else
+dcf.b.value=NO
+}
+</script>
+</head>
+<body>
+<form name=dcf>
+enter the number
+<input type=text name=a><br>
+<input type=button value=check onclick( )=armstrong( )>
+result:-<input type=text name=b>
+</form>
+</body>
+</html>
