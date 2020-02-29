@@ -1,9 +1,9 @@
 <html>
 
      <head>
-	 
-	         <title>  M2I  Enterprises  </title> 
- 		  <style>
+     
+             <title>  M2I  Enterprises  </title> 
+          <style>
 a
     {
     font-size:20;
@@ -132,12 +132,9 @@ font-size:20;
     transition-property:all;
     transition:all 1s;
 }
-body{
-    color:white;
-}
 </style>
-	 </head>
-	<body bgcolor=#8DC87B >
+     </head>
+    <body bgcolor=#8DC87B>
 <div style="position: absolute; top:0;right:0;"id=example1>
         <div>
         Hi 
@@ -179,74 +176,37 @@ body{
             ?>
         </div>    
     </div> 
-	<br>
-	 <div style="position:absolute; top:10;left:78;"><img src="images/00.jpg" width="180px" height="75px" ></div><br><br>
-	&nbsp;
-	<DIV style="position:absolute; top:30;left:280;"><h3><a>MAke In India</a></h3></div>
-	<br>
-	<center>
-	<h3><a href="categories.php">Home</a>    &nbsp &nbsp|&nbsp &nbsp      <a href="salesanddiscounts.html">Sales And Discounts</a>    &nbsp &nbsp|&nbsp &nbsp    <a href="cntct.php">Login/Sign up</a>    &nbsp &nbsp|&nbsp &nbsp        <a href="aboutus.html">About Us</a>    &nbsp &nbsp|&nbsp &nbsp    <a href="contactus.html">Contact Us</a>    &nbsp &nbsp|&nbsp &nbsp    <a href="privacypolicy.html">Privacy Policy</a></h3>
+    <br>
+     <DIV style="position:absolute; top:10;left:78;"><img src="images/00.jpg" width="180px" height="75px" ></div><br><br>
+    &nbsp;
+    <DIV style="position:absolute; top:30;left:280;"><h3><a>Make In India</a></h3></div>
+    <br>
+    <center>
+    <h3><a href="categories.php">Home</a>    &nbsp &nbsp|&nbsp &nbsp      <a href="salesanddiscounts.html">Sales And Discounts</a>    &nbsp &nbsp|&nbsp &nbsp    <a href="cntct.php">Login/Sign up</a>    &nbsp &nbsp|&nbsp &nbsp        <a href="aboutus.html">About Us</a>    &nbsp &nbsp|&nbsp &nbsp    <a href="contactus.html">Contact Us</a>    &nbsp &nbsp|&nbsp &nbsp    <a href="privacypolicy.html">Privacy Policy</a></h3>
 <hr>
-   <table>
-                <tr><th></th><th>Item Name</th><th>Unit Price</th><th>Quantity</th><th>Total</th><th></th></tr>    
-        <?php
-            $userDetailsArray = explode("#",$_COOKIE[$x]);
-                $phno = $userDetailsArray[2];
-                $billSum = 0;
-                $conn2 = new mysqli('localhost','root','','m2i_ent_carts');
-                $conn = new mysqli('localhost','root','','m2i_ent');
-                $result = $conn2->query("SELECT * FROM `$phno`");   
-                while($row=$result->fetch_assoc())        
-                {
-                    $id = $row["product_id"];
-                    $product = $conn->query("SELECT * FROM products where `id` = $id");
+   
+    &nbsp &nbsp&nbsp &nbsp
+  <a href="#"><img src="images/hm1.jpg" onmouseover="this.src='images/hm1a.jpg'" onmouseout="this.src='images/hm1.jpg'" width="300px height="180px" > 
+<a href="#"><img src="images/hm2.jpg" onmouseover="this.src='images/hm2a.jpg'" onmouseout="this.src='images/hm2.jpg'" width="300px height="180px" >
+<a href="#"><img src="images/hm3.jpg" onmouseover="this.src='images/hm3a.jpg'" onmouseout="this.src='images/hm3.jpg'" width="300px height="180px" >
+<a href="#"><img src="images/hm4.png" onmouseover="this.src='images/hm4a.jpg'" onmouseout="this.src='images/hm4.png'" width="300px height="180px" >
+<a href="#"><img src="images/hm5.jpg" onmouseover="this.src='images/hm5a.jpg'" onmouseout="this.src='images/hm5.jpg'" width="300px height="180px" >
+</a>
 
-                    while($row1 = $product->fetch_assoc()){
-                        $imgid = $row1["id"];
-                        $qry = "SELECT name FROM product_images WHERE product_id = $imgid;";
-                        $res2 = $conn->query($qry);
-                        $row2 = $res2->fetch_assoc();
-                
-        ?>
-                
-                <tr><td><img src="prodimages/<?php echo $row2["name"]; ?>" height="300" width="250"></td>
-                    <td><?php echo $row1["name"]; ?></td>
-                    <td><?php echo "$".$row1["price"]; ?></td>
-                    <td><?php echo $row["count"]; ?></td>
-                    <td><?php   $billSum = $billSum + $row["count"]*$row1["price"];
-                                echo $row["count"]*$row1["price"]; ?></td>
-                    <td><form method = post action="removefromcart.php"><input type=hidden value ="<?php echo $row["product_id"]; ?>" name=itemId><input type=submit value="Remove Item"></form></td>
-                </tr>    
-                    
-           
-       <?php
-                    }
-                }
-            $conn2->close();
-            $conn->close();
-            
-        
-        ?>
-        </table>
+    
         <br>
-                Your total amount = <?php echo $billSum; ?>
-        <form method=post action="createbill.php">
-            <button name=placeOrder>Place Order</button>
-            
-        </form>
-
-	    <br>
-		<br>
-		<br>
-	<div style="position:absolute; bottom:30px;width:100%" id=example2>
+        <br>
+        <br>
+   <div style="position:absolute; bottom:30px;width:100%" id=example2>
 <hr><center>
            <u><b>Copyrights & Copy 2017 All Rights Reserved M2I INDUSTRIES.</b></u>
         </center>        
     </div>
+    
          </center>
-	
-	
-	</body>	
+        
+    </body>   
+     
 
 
 </html>
